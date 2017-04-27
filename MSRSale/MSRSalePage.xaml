@@ -1,4 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MSRSale" x:Class="MSRSale.MSRSalePage">
-    <Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+
+   <Grid>
+       <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="Black"  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="100" VerticalOptions="Center">
+                <ContentView Padding="0,10,0,10" VerticalOptions="FillAndExpand">
+                    <Image x:Name="LogoImage" Aspect='AspectFit' Source="MSFT_Logo.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+
+
+            <StackLayout Grid.Row="1">
+           
+             <DatePicker x:Name="selectedDate" Margin="10"/>
+                    
+
+                     <Picker x:Name="LocationPicker" Margin="10"/>
+         
+               
+           
+               <!-- 
+                 <Picker x:Name="AccountsPicker" Margin="10"/>   
+                <Picker x:Name="CategoryPicker" Margin="10"/>
+                <Picker x:Name="SKUPicker" Margin="10"/>-->
+                <Entry  Keyboard="Numeric" x:Name="Quantity" Margin="10"/>
+                <Button Text="Submit"  />
+            </StackLayout>
+           
+        
+        </Grid>
+
 </ContentPage>

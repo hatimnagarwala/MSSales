@@ -20,8 +20,9 @@
              <DatePicker x:Name="selectedDate" Margin="10"/>
                     
 
-                     <Picker x:Name="LocationPicker" Margin="10"/>
+              <Picker x:Name="LocationPicker" Margin="10"/>
          
+               
                
            
                <!-- 

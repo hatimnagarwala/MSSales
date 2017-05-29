@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace MSRSale
 {
@@ -7,6 +9,19 @@ namespace MSRSale
         public MSRSalePage()
         {
             InitializeComponent();
+            loadPickerData();
+
+        }
+
+        private void loadPickerData()
+        {
+            List<string> locations = new List<string>();
+            locations.Add("Carrefour");
+            locations.Add("Emax");
+            locations.Add("Jumbo");
+
+
+            LocationPicker.ItemsSource = locations;
         }
     }
 }

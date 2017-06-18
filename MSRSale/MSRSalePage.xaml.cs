@@ -34,7 +34,6 @@ namespace MSRSale
         private void LocationPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
           
-
         }
 
         private void CategoryPicker_SelectedIndexChanged(object sender, EventArgs e)

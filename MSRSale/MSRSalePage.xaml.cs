@@ -15,13 +15,7 @@ namespace MSRSale
 
         private void loadPickerData()
         {
-            List<string> locations = new List<string>();
-            locations.Add("Carrefour");
-            locations.Add("Emax");
-            locations.Add("Jumbo");
-
-
-            LocationPicker.ItemsSource = locations;
+    
         }
     }
 }

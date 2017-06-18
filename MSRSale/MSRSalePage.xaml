@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MSRSale" x:Class="MSRSale.MSRSalePage">
-
    <Grid>
        <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -16,29 +15,16 @@
 
 
             <StackLayout Grid.Row="1">
-<!--           
-             <DatePicker x:Name="selectedDate" Margin="10"/>
 
-                    <Picker Title="Select Date" x:Name="selectedDate"></Picker>
-                <Picker Title="Select a Location" x:Name="LocationPicker" ItemsSource="{Binding Locations}" ></Picker>
-                <Picker Title="Account" x:Name="AccountPicker"></Picker>
-                <Picker Title="Category" x:Name="CategoryPicker"></Picker>
-                <Picker Title="SKU" x:Name="SKUPicker"   ></Picker>
-            
-              
-                <Entry  Keyboard="Numeric" x:Name="Quantity" Margin="10"/>
-                <Button Text="Submit"  />-->
 
-            
-
-                <DatePicker Title="Select Date" x:Name="selectedDate" Margin="10" ></DatePicker>
-                <Picker Title="Select a Location" x:Name="LocationPicker" Margin="10"></Picker>
+                <DatePicker x:Name="selectedDate" Margin="10" ></DatePicker>
+                <Picker Title="Select a Location" x:Name="LocationPicker" Margin="10" SelectedIndexChanged="LocationPicker_SelectedIndexChanged" ></Picker>
                 <Picker Title="Account" x:Name="AccountPicker" Margin="10"></Picker>
                 <Picker Title="Category" x:Name="CategoryPicker" Margin="10"></Picker>
                 <Picker Title="SKU" x:Name="SKUPicker" Margin="10"></Picker>
 
-              
-            
+                <Button Text="Submit" x:Name="submitBtn" Clicked="submitBtn_Clicked"></Button>
+
             
             </StackLayout>
            

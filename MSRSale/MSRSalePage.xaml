@@ -8,21 +8,23 @@
         <StackLayout BackgroundColor="Black"  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="100" VerticalOptions="Center">
                 <ContentView Padding="0,10,0,10" VerticalOptions="FillAndExpand">
-                    <Image x:Name="LogoImage" Aspect='AspectFit' Source="MSFT_Logo.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Image x:Name="LogoImage" Aspect='AspectFit' Source="MSFT_logo.png" VerticalOptions="Center" HorizontalOptions="Start"/>
                 </ContentView>
             </StackLayout>
         </StackLayout>
 
 
-            <StackLayout Grid.Row="1">
-                
-                <DatePicker x:Name="selectedDate" Margin="10" ></DatePicker>
-                <Picker Title="Select a Location" x:Name="LocationPicker" Margin="10" SelectedIndexChanged="LocationPicker_SelectedIndexChanged" ></Picker>
-                <Picker Title="Account" x:Name="AccountPicker" Margin="10"></Picker>
-                <Picker Title="Category" x:Name="CategoryPicker" Margin="10" SelectedIndexChanged="CategoryPicker_SelectedIndexChanged" ></Picker>
-                <Picker Title="SKU" x:Name="SKUPicker" Margin="10"></Picker>
+       
 
-                <Button Text="Submit" x:Name="submitBtn" Clicked="submitBtn_Clicked"></Button>
+            <StackLayout Grid.Row="1" >
+                
+                <DatePicker TextColor="Red" x:Name="selectedDate" Margin="10" HeightRequest="50" ></DatePicker>
+                <Picker     TextColor="Lime" Title="Select a Location" x:Name="LocationPicker" Margin="10" HeightRequest="50" SelectedIndexChanged="LocationPicker_SelectedIndexChanged" ></Picker>
+                <Picker     Title="Account" x:Name="AccountPicker" Margin="10" HeightRequest="50" ></Picker>
+                <Picker     Title="Category" x:Name="CategoryPicker" Margin="10" HeightRequest="50" SelectedIndexChanged="CategoryPicker_SelectedIndexChanged" ></Picker>
+                <Picker     Title="SKU" x:Name="SKUPicker" Margin="10" HeightRequest="50" ></Picker>
+
+                <Button BackgroundColor="#00A5F4" TextColor="White" Margin="20" HeightRequest="50" Text="Submit" x:Name="submitBtn" Clicked="submitBtn_Clicked"></Button>
 
             
             </StackLayout>  

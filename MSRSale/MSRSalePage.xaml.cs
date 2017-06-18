@@ -29,16 +29,17 @@ namespace MSRSale
 
         private void submitBtn_Clicked(object sender, EventArgs e)
         {
+            
         }
 
         private void LocationPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void CategoryPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -23,12 +23,12 @@ namespace MSRSale
 
             LocationPicker.ItemsSource = pData.Location;
             CategoryPicker.ItemsSource = pData.Category;
-            
+
+
         }
 
         private void submitBtn_Clicked(object sender, EventArgs e)
         {
-
         }
 
         private void LocationPicker_SelectedIndexChanged(object sender, EventArgs e)

@@ -23,8 +23,10 @@
                 <Picker Title="SKU" x:Name="SKUPicker" Margin="10"></Picker>
 
                 <Button Text="Submit" x:Name="submitBtn" Clicked="submitBtn_Clicked"></Button>
+
             
-            </StackLayout>           
+            </StackLayout>  
+       
         
         </Grid>
 

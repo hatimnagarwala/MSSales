@@ -20,7 +20,7 @@
                 <DatePicker x:Name="selectedDate" Margin="10" ></DatePicker>
                 <Picker Title="Select a Location" x:Name="LocationPicker" Margin="10" SelectedIndexChanged="LocationPicker_SelectedIndexChanged" ></Picker>
                 <Picker Title="Account" x:Name="AccountPicker" Margin="10"></Picker>
-                <Picker Title="Category" x:Name="CategoryPicker" Margin="10"></Picker>
+                <Picker Title="Category" x:Name="CategoryPicker" Margin="10" SelectedIndexChanged="CategoryPicker_SelectedIndexChanged" ></Picker>
                 <Picker Title="SKU" x:Name="SKUPicker" Margin="10"></Picker>
 
                 <Button Text="Submit" x:Name="submitBtn" Clicked="submitBtn_Clicked"></Button>

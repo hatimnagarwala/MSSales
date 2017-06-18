@@ -11,10 +11,7 @@ namespace MSRSale
         public MSRSalePage()
         {
             InitializeComponent();
-            loadPickerData();
-            
-            
-            
+            loadPickerData();            
         }
 
         private void loadPickerData()
@@ -22,17 +19,11 @@ namespace MSRSale
             PickerData pData = new PickerData();
 
             pData.Location = new List<string>(new[] { "SharafDG", "Jumbo", "Carrefour" });
-
             pData.Category = new List<string>(new[] { "Catergory1", "Category2" });
-
-
-
 
             LocationPicker.ItemsSource = pData.Location;
             CategoryPicker.ItemsSource = pData.Category;
-
-
-
+            
         }
 
         private void submitBtn_Clicked(object sender, EventArgs e)
@@ -46,7 +37,9 @@ namespace MSRSale
 
         }
 
- 
+        private void CategoryPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -1,35 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MSRSale" x:Class="MSRSale.MSRSalePage">
-   <Grid>
-       <Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="Black"  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="100" VerticalOptions="Center">
                 <ContentView Padding="0,10,0,10" VerticalOptions="FillAndExpand">
-                    <Image x:Name="LogoImage" Aspect='AspectFit' Source="MSFT_logo.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Image x:Name="LogoImage" Aspect="AspectFit" Source="MSFT_logo.png" VerticalOptions="Center" HorizontalOptions="Start" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
-
-
-       
-
-            <StackLayout Grid.Row="1" >
-                
-                <DatePicker TextColor="Red" x:Name="selectedDate" Margin="10" HeightRequest="50" ></DatePicker>
-                <Picker     TextColor="Lime" Title="Select a Location" x:Name="LocationPicker" Margin="10" HeightRequest="50" SelectedIndexChanged="LocationPicker_SelectedIndexChanged" ></Picker>
-                <Picker     Title="Account" x:Name="AccountPicker" Margin="10" HeightRequest="50" ></Picker>
-                <Picker     Title="Category" x:Name="CategoryPicker" Margin="10" HeightRequest="50" SelectedIndexChanged="CategoryPicker_SelectedIndexChanged" ></Picker>
-                <Picker     Title="SKU" x:Name="SKUPicker" Margin="10" HeightRequest="50" ></Picker>
-
-                <Button BackgroundColor="#00A5F4" TextColor="White" Margin="20" HeightRequest="50" Text="Submit" x:Name="submitBtn" Clicked="submitBtn_Clicked"></Button>
-
-            
-            </StackLayout>  
-       
-        
-        </Grid>
-
+        <ScrollView Grid.Row="1">
+            <StackLayout Grid.Row="1">
+                <DatePicker TextColor="Gray" x:Name="selectedDate" Margin="10" HeightRequest="50">
+                </DatePicker>
+                <Picker TextColor="Lime" Title="Select a Location" x:Name="LocationPicker" Margin="10" HeightRequest="50" SelectedIndexChanged="LocationPicker_SelectedIndexChanged">
+                </Picker>
+                <Picker Title="Select an Account" x:Name="AccountPicker" Margin="10" HeightRequest="50">
+                </Picker>
+                <Picker Title="Category" x:Name="CategoryPicker" Margin="10" HeightRequest="50" SelectedIndexChanged="CategoryPicker_SelectedIndexChanged">
+                </Picker>
+                <!--                <Picker     Title="SKU" x:Name="SKUPicker" Margin="10" HeightRequest="50" ></Picker>-->
+                <ListView x:Name="SkuListview" HasUnevenRows="true">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="15">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="0.5*"/>
+                                        
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding SKU}" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                    <Entry WidthRequest="15" HeightRequest="40" VerticalOptions="Center" HorizontalTextAlignment="Center"  Text="{Binding Qty}" Grid.Column="1" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <Button BackgroundColor="#00A5F4" TextColor="White" Margin="20" HeightRequest="50" Text="Submit" x:Name="submitBtn" Grid.Row="2" Clicked="submitBtn_Clicked">
+        </Button>
+    </Grid>
 </ContentPage>

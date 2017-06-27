@@ -24,6 +24,14 @@ namespace MSRSale
             LocationPicker.ItemsSource = pData.Location;
             CategoryPicker.ItemsSource = pData.Category;
 
+            List<ListModelSKU> skus = new List<ListModelSKU>();
+			skus.Add(new ListModelSKU { Qty = "0", SKU = "Microsoft surface" });
+			skus.Add(new ListModelSKU { Qty = "0", SKU = "Microsoft surface" });
+			skus.Add(new ListModelSKU { Qty = "0", SKU = "Microsoft surface" });
+			skus.Add(new ListModelSKU { Qty = "0", SKU = "Microsoft surface" });
+			skus.Add(new ListModelSKU { Qty = "0", SKU = "Microsoft surface" });
+
+            SkuListview.ItemsSource = skus;
 
         }
 
@@ -42,4 +50,22 @@ namespace MSRSale
             
         }
     }
+
+    public class ListModelSKU
+    {
+        public string SKU
+        {
+            get;
+            set;
+        }
+
+        public string Qty
+        {
+            get;
+            set;
+  
+        }
+
+    }
+
 }
